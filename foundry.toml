@@ -6,5 +6,8 @@ remappings = [
     "ds-test/=lib/forge-std/lib/ds-test/src/",
     "forge-std/=lib/forge-std/src/",
 ]
+viaIR = true
+
+fs_permissions = [{ access = "read", path = "./.env"}]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
