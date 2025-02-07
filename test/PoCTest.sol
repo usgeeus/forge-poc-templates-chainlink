@@ -75,7 +75,7 @@ contract PoCTest is PoC {
         vrfCoordinatorV2_5Mock.withdrawNative(payable(address(this)));
     }
 
-    function testOnSepolia() public {
+    function testOnForkedSepolia() public {
         // Fork Sepolia
         string memory key = "SEPOLIA_RPC_URL";
         string memory SEPOLIA_RPC_URL = vm.envString(key);
