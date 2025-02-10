@@ -29,9 +29,11 @@ When an EOA calls `requestRandomWords` on `VRFCoordinatorV2_5`, the `fulfillRand
 
 > **Relevant Snippet (Within `_callWithExactGas`)**
 >
+> ```
 > if iszero(extcodesize(target)) {
-> revert(0, 0);
+>   revert(0, 0);
 > }
+> ```
 
 # Impact
 
