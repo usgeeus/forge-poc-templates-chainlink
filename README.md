@@ -27,7 +27,7 @@ In other words, **both the user’s subscription** (lock issue) **and the protoc
 
 3. **Consequences**
    - **Subscription Lock**: `pendingRequestExists(subId)` will be `true`, blocking `cancelSubscription`, `removeConsumer`, or `migrate`.
-   - **Lost Fees**: The request reverts before `_chargePayment` can finalize, so the protocol is not compensated for its processing.
+   - **Lost Fees**: The `fulfillRandomwords` reverts before `_chargePayment` can finalize, so the protocol is not compensated for its processing.
    - **Denial of Service**: The subscriber can only escape this situation by asking the contract owner to call `ownerCancelSubscription`. In a trust-minimized setting, that approach undermines decentralization and potentially requires additional overhead.
 
 > **Relevant Snippet (Within `_callWithExactGas`)**
